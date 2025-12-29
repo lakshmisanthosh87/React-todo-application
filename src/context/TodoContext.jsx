@@ -24,7 +24,7 @@ export const TodoProvider = ({Children})=>{
     }
 
     const updateTodo = (id,newText)=>{
-        setTodos(todos.map(todo=>todo.id==id?(...todo,text=newText) : todo.text))
+        setTodos(todos.map(todo=>todo.id==id?{...todo,text:newText}:text))
 
     }
 
